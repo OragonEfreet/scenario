@@ -1,0 +1,6 @@
+[book]
+title = "L'Age d'Or"
+authors = ["Oragon Efreet"]
+language = "fr"
+multilingual = false
+src = "src"
