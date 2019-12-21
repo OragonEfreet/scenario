@@ -2,12 +2,12 @@
 
 ## Contexte
 
-Cette aventure fait suite à **Les Gobelins de Harald**.
+Cette aventure est la suite à **Les Gobelins de Harald**.
 
 Les aventuriers sont enfermés dans les geôles de Pierre-Noire, la capitale régionale de l'Est de l'Empire.
-Après en être sortis, ils doivent mener une enquête les conduisant droit dans les profondeurs de la ville où se cache un groupe travaillant pou la restitution de la ville aux orque.
+Après en être sortis, ils doivent mener une enquête les conduisant droit dans les profondeurs de la ville où se cache un groupe travaillant pour la restitution de la ville aux orque.
 
-Durant ce scénario, les aventuriers font à nouveau la rencontre de **Firion** et **Lorànt**. La trame générale de la campagne s'installera. Ils font aussi la rencontre d'un nouveau personnage récurrent : **Johanna** la voleuse.
+Durant ce scénario, les aventuriers font à nouveau la rencontre de **Firion** et **Lorànt**. La trame générale de la campagne s'installera. Ils font aussi la rencontre d'un nouveau personnage récurrent : **Laïna** la voleuse.
 
 Le scénario tourne autour du **Grenat Orque**. Cette pierre était en possession de **Firion** lors du prologue. Les joueurs n'en découvrent pas encore toute l'importance mais savent qu'elle n'est pas une pierre anodine.
 

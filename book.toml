@@ -4,3 +4,7 @@ authors = ["Oragon Efreet"]
 language = "fr"
 multilingual = false
 src = "src"
+
+[build]
+build-dir = "docs"
+
