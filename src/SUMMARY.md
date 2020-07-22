@@ -6,4 +6,6 @@
 - [La Chute de Pierre-Noire](./chapter_2.md)
 --------------------------------------------------------------------------------
 [Personnnages Importants](characters.md)
-[Tables](tables.md)
+[Bestiaire](bestiaire.md)
+[Groupes](groupes.md)
+[Références](ack.md)

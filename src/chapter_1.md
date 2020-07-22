@@ -351,7 +351,7 @@ Un autre sort de l'ombre et s'apprête à attaquer à son tour.
 
 Au début de cette rencontre le premier zombie et potentiellement un aventurier sont à terre.
 
-8
+### 8
 
 Un passage est caché sous le lit.
 Il mène à l'ancienne salle des pièces à conviction, les objets confisqués aux anciens prisonniers.
