@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html lang="fr" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Personnnages Importants - L'Age d'Or</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Les Gobelins de Harald</a></li><li class="chapter-item expanded "><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> La Chute de Pierre-Noire</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="characters.html" class="active">Personnnages Importants</a></li><li class="chapter-item expanded affix "><a href="bestiaire.html">Bestiaire</a></li><li class="chapter-item expanded affix "><a href="groupes.html">Groupes</a></li><li class="chapter-item expanded affix "><a href="ack.html">Références</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">L'Age d'Or</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#personnnages-importants" id="personnnages-importants">Personnnages Importants</a></h1>
+<h2><a class="header" href="#firion" id="firion">Firion</a></h2>
+<p><em>Bête de taille TP, chaotique neutre</em></p>
+<p><strong>Classe d'armure</strong> 12 <br />
+<strong>Points de vie</strong> 2 (1d4) <br />
+<strong>Vitesse</strong> 12 m, escalade 9 m </p>
+<table><thead><tr><th><strong>FOR</strong></th><th><strong>DEX</strong></th><th><strong>CON</strong></th><th><strong>INT</strong></th><th><strong>SAG</strong></th><th><strong>CHA</strong></th></tr></thead><tbody>
+<tr><td>2 (-4)</td><td>15 (+2)</td><td>7 (-2)</td><td>16 (+3)</td><td>9 (-1)</td><td>11 (+0)</td></tr>
+</tbody></table>
+<p><strong>Compétences</strong> Discrétion +4, Perception +3, Escamotage +3 <br />
+<strong>Sens</strong> Perception passive 13 <br />
+<strong>Langues</strong> Commun, Orque
+<strong>Puissance</strong> 0 (10 PX)</p>
+<p><strong>Odorat aiguisé</strong>. Le chat a un avantage aux jets de Sagesse (Perception) basés sur l'odorat.</p>
+<p><strong>Lien mental</strong>. Firion est parfois capable de communiquer, lire ou influencer l'esprit des aventuriers qui étaient présents lors de son transfert d'âme. Une fois par jour, il peut avantager ou désavantager le test de Perception de l'un d'eux.</p>
+<h3><a class="header" href="#actions" id="actions">ACTIONS</a></h3>
+<p><strong>Griffes</strong>. Attaque au corps à corps avec une arme : +0 au toucher, allonge 1,50 m, une cible. Touché : 1 dégât tranchant.</p>
+<blockquote>
+<p>Anciennement humain, l'âme de Firion a été emprisonnée dans le corps d'un chat suite à l'échec d'un rituel.
+Depuis, Firion a perdu toutes ses capacités magiques. Cependant, et pour une raison qu'il n'explique pas, il est
+parfois capable de manifestations mentales avec les membres du groupe présents lors du rituel.</p>
+</blockquote>
+<hr />
+<h2><a class="header" href="#mazoga" id="mazoga">Mazoga</a></h2>
+<p><em>Humanoïde (orque) de taille M, Loyal mauvais</em></p>
+<p><strong>Classe d'armure</strong> 13 (armure de peau)
+<strong>Points de vie</strong> 15 (2d8+6)
+<strong>Vitesse</strong> 9 m</p>
+<table><thead><tr><th><strong>FOR</strong></th><th><strong>DEX</strong></th><th><strong>CON</strong></th><th><strong>INT</strong></th><th><strong>SAG</strong></th><th><strong>CHA</strong></th></tr></thead><tbody>
+<tr><td>16 (+3)</td><td>12 (+1)</td><td>16 (+3)</td><td>7 (-2)</td><td>11 (+0)</td><td>10 (+0)</td></tr>
+</tbody></table>
+<p><strong>Compétences</strong> Intimidation +2 <br />
+<strong>Sens</strong> vision dans le noir 18 m, Perception passive 10 <br />
+<strong>Langues</strong> commun, orque <br />
+<strong>Puissance</strong> 1/2 (100 PX) </p>
+<p><strong>Agressif</strong>. Par une action bonus, l'orque peut se déplacer de sa vitesse vers une créature hostile qu'il peut voir.</p>
+<h3><a class="header" href="#actions-1" id="actions-1">Actions</a></h3>
+<p><strong>Hache à deux mains</strong>. Attaque au corps à corps avec une arme : +5 au toucher, allonge 1,50 m, une cible. Touché : 9 (1d12 + 3) dégâts tranchants. </p>
+<blockquote>
+<p>Cheffe de la faction des tisonniers.</p>
+</blockquote>
+<hr />
+<h2><a class="header" href="#siv" id="siv">Siv</a></h2>
+<p><em>Humanoïde (Humaine) de taille M, chaotique neutre</em></p>
+<p><strong>Classe d'armure</strong> 15 (armure de cuir cloué) <br />
+<strong>Point de vie</strong> 84 (13d8+26) <br />
+<strong>Vitesse</strong> 9m </p>
+<table><thead><tr><th><strong>FOR</strong></th><th><strong>DEX</strong></th><th><strong>CON</strong></th><th><strong>INT</strong></th><th><strong>SAG</strong></th><th><strong>CHA</strong></th></tr></thead><tbody>
+<tr><td>11 (+0)</td><td>18 (+4)</td><td>14 (+2)</td><td>11 (+0)</td><td>11 (+0)</td><td>12 (+1)</td></tr>
+</tbody></table>
+<p><strong>Jets de sauvegarde</strong> Dex +7, Int +3 <br />
+<strong>Compétences</strong> Acrobatie +7, Athlétisme +3, Perception +3, Escamotage +7, Discretion +7 <br />
+<strong>Sens</strong> Perception passive 13 <br />
+<strong>Langues</strong> Commun, jargon des voleurs <br />
+<strong>Puissance</strong> 5 (1800 PX) </p>
+<p><strong>Action fourbe</strong> A chaque de ses tours, Siv peut utiliser une action bonus pour effectuer les actions Foncer, Se Cacher ou Se Désengager. <br />
+<strong>Evasion</strong> Si Siv est soumise à un effet qui lui permet d'effectuer un jet de sauvegarde de Dextérité pour ne subir que la moitié des dégats, elle ne subit aucun défats si elle réussit son jet de sauvegarde et seulement la moitié si elle échoue. <br />
+<strong>Attaque sournoise (1/tour)</strong> Siv inflige 14 (4d6) dégats supplémentaires quand elle touche une cible au cours d'une attaque avec une arme  et qu'elle a un avantage au jet d'attaque, ou lorsque la dible est à 1.50 mètres ou moins d'un de ses alliés qui n'est pas incapable d'agir et n'a pas de désavantage à son jet d'attaque. </p>
+<h3><a class="header" href="#actions-2" id="actions-2">Actions</a></h3>
+<p><strong>Attaques multiples</strong> Siv effectue trois attaques avec sa dague. <br />
+<strong>Dague</strong> Attaque au corps à corps avec une arme. +7 au toucher, allonge 1.50m, une cible. Touché: 2 (1d4) dégats perforants. <br />
+<strong>Arbalète de poignet</strong> Attaque à distance avec une arme  +7 au toucher, portée 24/96m, une cible. Touché: 4 (1d8) dégâts perforants.</p>
+<h3><a class="header" href="#réactions" id="réactions">Réactions</a></h3>
+<p><strong>Esquive</strong> Siv réduit de moitié les dégâts qu'elle subit d'une attaque qui la touche. La voleuse doit être capable de voir l'attaquant.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="chapter_2.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="bestiaire.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="chapter_2.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="bestiaire.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

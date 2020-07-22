@@ -1,0 +1,666 @@
+<!DOCTYPE HTML>
+<html lang="fr" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>La Chute de Pierre-Noire - L'Age d'Or</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Les Gobelins de Harald</a></li><li class="chapter-item expanded "><a href="chapter_2.html" class="active"><strong aria-hidden="true">2.</strong> La Chute de Pierre-Noire</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="characters.html">Personnnages Importants</a></li><li class="chapter-item expanded affix "><a href="bestiaire.html">Bestiaire</a></li><li class="chapter-item expanded affix "><a href="groupes.html">Groupes</a></li><li class="chapter-item expanded affix "><a href="ack.html">Références</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">L'Age d'Or</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#la-chute-de-pierre-noire" id="la-chute-de-pierre-noire">La Chute de Pierre-Noire</a></h1>
+<h2><a class="header" href="#contexte" id="contexte">Contexte</a></h2>
+<p>Cette aventure est la suite à <strong>Les Gobelins de Harald</strong>.</p>
+<p>Les aventuriers sont enfermés dans les geôles de Pierre-Noire, la capitale régionale de l'Est de l'Empire.
+Après en être sortis, ils doivent mener une enquête les conduisant droit dans les profondeurs de la ville où se cache un groupe travaillant pour la restitution de la ville aux orque.</p>
+<p>Durant ce scénario, les aventuriers font à nouveau la rencontre de Firion.
+La trame générale de la campagne s'installera.
+Ils font aussi la rencontre d'un nouveau personnage récurrent : <strong>Siv</strong> la voleuse.</p>
+<p>Le scénario tourne autour du <strong>Grenat Orque</strong>.
+Cette pierre était en possession de Firion lors du prologue.
+Les joueurs n'en découvrent pas encore toute l'importance mais savent qu'elle n'est pas une pierre anodine.</p>
+<h3><a class="header" href="#quest-il-arrivé-au-grenat-" id="quest-il-arrivé-au-grenat-">Qu'est-il arrivé au Grenat ?</a></h3>
+<p>Que les joueurs aient pris ou pas le grenat à Firion importe peu puisqu'ils en sont dépossédés de leurs biens par les forces de l'ordre en début de scénario.
+Le grenat est ensuite volé par un membre d'un groupe qui cherche à accomplir quelque rituel.</p>
+<h3><a class="header" href="#pierre-noire" id="pierre-noire">Pierre-Noire</a></h3>
+<p>Pierre-Noire est la capitale régionale politique de l'Empire.
+Elle est bâtie sur les ruines d'un ancien fort militaire orque, ce qui explique son aspect imposant et sa position stratégique.
+Située à l'Est de l'empire, elle est bordée par la frontière Orque au nord, les montagnes à l'ouest et l'océan à l'est.
+En surface, la ville de Pierre-Noire n'a rien de particulier.
+Cependant la ville est batie par dessus les ruines de l'ancien fort Orque.
+Sous la ville, des galeries encore utilisables traversent toute la surface.
+Les contrebandiers, les voleurs et les créatures les plus craintes tirent profit de ce dédale.
+Autrefois, l'Est du continent était un territoire Orque.
+Le territoire a été annexé par l'Empire il y a longtemps de cela.
+Durant le scénario, la ville de Pierre-Noire sera envahie par une armée orque, aidée par l'apparition improbable d'entités de feu à l'intérieur de la ville.</p>
+<p>La ville de Pierre-Noire est décrite plus en détails en <a href="pierre-noire.html">annexe</a>.</p>
+<h3><a class="header" href="#les-tisonniers" id="les-tisonniers">Les Tisonniers</a></h3>
+<p><strong>Les Tisonniers</strong> est un groupe criminel underground qui sévit dans Pierre-Noire.
+Le groupe est très récent dans la ville et son existence est encore considérée comme à confirmer d'après les représentants de l'ordre.
+D'aucuns pensent que les guildes locales du crime <strong>ont inventé un bouc émissaire pour semer le doute</strong>.
+En réalité les Tisonniers sont un groupe travaillant pour le chef orque <strong>Sharog</strong>.
+Il est dirigé par l'orque <strong>Mazoga</strong>, la soeur de Sharog.
+Le but des Tisonniers est d'utiliser le Grenat pour invoquer des entités de feu dans la ville et semer le chaos, l'affaiblissant suffisamment pour que les orques lancent une attaque finale sur la ville, venant de la mer à l'est et de la terre au nord.
+Les tisonniers ne sont pas un groupe entièrement orque, mais plutôt un <strong>groupe politique</strong>, composé de dissidents de l'empire qui souhaitent la restitution de l'est de l'empire aux orques.
+Aussi les activités des Tisonniers sont variées mais tiennent principalement <strong>du vol et de la mafia</strong>.</p>
+<h3><a class="header" href="#déroulement" id="déroulement">Déroulement</a></h3>
+<p>Après avoir été <strong>dépouillés</strong> de leurs biens et <strong>attachés</strong>, les joueurs partent de Harald pour faire route bien gardée vers Pierre-Noire.
+Aussitôt arrivés ils sont <strong>enfermés</strong> dans les geôles de la ville où l'aventure commence pour de bon.
+Parvenant tout de même à s'évader, les personnages rencontrent <strong>Firion</strong> qui, à leur grande surprise, leur apparaît sous la forme d'un <strong>chat</strong>.
+Celui-ci leur apprend l'existence du Grenat et reproche sa disparition aux PJ.
+En effet la pierre avait été récupérée par les gardes pendant les événement de Harald et déposée dans la salle des pièces à conviction.
+Malheureusement elle a <strong>disparu</strong>.
+Les joueurs menent alors l'<strong>enquête</strong> dans toute la ville pour retrouver le grenat.</p>
+<p>En réalité, le grenat a été volé par l'ordre des Tisonniers de Mazoga.
+Bien que l'objectif des personnages soit de les en empêcher, <strong>les Tisonniers réussisent</strong> quoi qu'il arrive à accomplir le rituel cherchant à invoquer des entités de feu dans la ville.
+S'en suit alors la <strong>destruction de Pierre-Noire</strong> sous les yeux impuissants des aventuriers.</p>
+<h2><a class="header" href="#le-voyage-vers-pierre-noire" id="le-voyage-vers-pierre-noire">Le voyage vers Pierre-Noire</a></h2>
+<blockquote>
+<p>Cette partie n'est <strong>pas jouable</strong>, hormis quelques moments possibles de <strong>dialogues libres</strong> pour les joueurs._</p>
+</blockquote>
+<p>Après leur arrestation, les personnages ont été <strong>détenus quelques jours dans Harald</strong> en attendant l'escorte des prisonniers de guerre <strong>venant de la frontière nord</strong>.</p>
+<p>Le groupe est composé d'<strong>une centaine de gardes</strong> et d'une <strong>vingtaine de prisonniers</strong> en plus des personnages.
+Le voyage se passe sans encombre et dure <strong>quelques jours</strong>.
+Un soir, pendant le repas, un jeune garde s'approche des personnages et leur donne leur soupe en leur adressant la parole.
+Il dit qu'il sait très bien que les gobelins ont kidnappé les prisonniers et il félicite les personnages pour leur courage.
+Le jeune homme s'appelle <strong>Hod</strong> et revient de faire ses armes pour son service.
+Maintenant qu'il a servi l'empire sur la frontière, il compte utiliser sa solde pour commencer une vie en ville et réaliser <strong>son rêve : devenir cuisinier</strong>.
+Il vient d'avoir un poste d'<strong>assistant au palais</strong> de Pierre-Noire.</p>
+<p>Si les joueurs parlent à Hod, ils peuvent lui poser <strong>deux questions seulement</strong> avant qu'un garde plus gradé ne l'interpelle:</p>
+<ul>
+<li>L'escorte compte une centaine de soldats et une cinquantaine de prisonniers orques ; il s'agit de la plus grosse escorte de prisonniers jamais effectuée de mémoire de Hod.</li>
+<li>Les PJ partent pour Pierre-Noire, la capitale régionale, où un <strong>procès</strong> leur sera rendu.</li>
+<li>La peine appliquée sera probablement le service armé au front.</li>
+<li>Hod <strong>rêve d'être cuisinier</strong> ; La récompense ultime selon lui est de servir les plus puissants de ce monde grâce aux mets qu'ils a appris durant ses futurs voyages.</li>
+<li>Quelques nuits, il a cru <strong>apercevoir un chat noir</strong> au loin ; &quot;soit il nous suit, soit c'est une coincidence.&quot;</li>
+</ul>
+<p>Durant le trajet restant, un <strong>test de perception passif (ou demandé) normal</strong> permettra au joueurs, une fois, de remarquer le <strong>chat noir à la queue blanche</strong>.
+Le test est <strong>avantagé si Hod en a parlé</strong> avant.</p>
+<p>Les PJ sont libres de discuter pendant le trajet, principalement pour se remémorer les événements passés au prologue.
+Lorsqu'ils sont près, ils arrivent à Pierre-Noire.</p>
+<h2><a class="header" href="#la-prison" id="la-prison">La Prison</a></h2>
+<blockquote>
+<p><strong>Aide de jeu:</strong> Cette phase doit être rapide.
+Un sentiment d'<strong>efficacité</strong> et de <strong>victoire</strong> pour les PJ doit résulter de l'évasion.
+Ne pas hésiter à les guider et empêcher tout vide de progression</p>
+</blockquote>
+<p>La <strong>première nuit</strong> de leur emprisonnement, les joueurs sont réveillés par des <strong>éclats de voix</strong>.
+L'obscurité les empêche d'identifier grand chose, mais les plus observateurs (et reveillés) des PJ remarqueront une <strong>silouhette noire</strong> de petite taille passer devant la cellule, suivie par <strong>deux autres</strong> gardes bruyant lui sommant de revenir, criant &quot;Chopez-la!&quot;.</p>
+<p>Le matin, les PJ sont reveillés par l'arrivée de la relève.
+Deux gardes accompagnés d'<strong>un vieil homme</strong> en haillons jettent ce dernier dans la cellule en face des joueurs, puis vérouillent la grille.
+La relève demande alors aux gardes de nuit ce que la voleuse était venue prendre.
+Ces derniers déclarent <strong>ne pas le savoir</strong>.
+Puis ils s'en vont, souhaitant bonne journée à leurs collègues.</p>
+<p>La prison est une <strong>cellule de pierre</strong> épaisse donnant sur un <strong>couloir lumineux</strong>.
+Les murs sont très <strong>solides</strong>.
+L'ouverture donnant sur le couloir est une grille faite de solides <strong>barreaux en fonte</strong>, impossible à tordre.
+Les barreaux sont suffisamment espacés pour y faire passer <strong>un bras, mais pas plus</strong>.
+Une porte de barreaux est insérée dans la barrière.
+Elle est évidemment <strong>vérouillée</strong> par une serrure dont l'ouverture ne donne que côté couloir.</p>
+<p>En face, les PJ peuvent voir l'<strong>autre cellule</strong>, identique.
+Elle est occupée par <strong>le vieil homme</strong> maigrelet, habillé de tissus déchirés et arborant une barbe blanchie par l'âge.
+<em>&quot;Un mendiant sans doute&quot;</em>.
+Il ne semble pas prêter attention aux PJ et chantonne un air dont lui seul connait les paroles.
+Les joueurs peuvent <strong>obtenir des informations</strong> basiques sur leur situation grâce à cet homme:</p>
+<ul>
+<li>Le prisonnier s'appelle <strong>Bronson</strong>.
+Il a eu la malchance de mendier sous les portes d'une personne trop influente.</li>
+<li>Le garde possède <strong>un trousseau de clefs</strong> dans sans poche.</li>
+<li>On ne se plaint pas de la nourriture en prison ; Il parait que les gardes ont servi du poulet aux prisonniers il y a quelques jours ; &quot;<strong>Des cuissots entiers avec l'os</strong>&quot;.</li>
+<li>Le garde s'appelle <strong>Axel</strong> et vient de se fiancer d'avec une certaine <em>Katrina</em>.
+A chaque fois que le garde passe, <strong>Bronson</strong> lui demande s'il peut avoir du thé.</li>
+</ul>
+<blockquote>
+<p>Aide de jeu.
+Le vieil homme peut être joué comme le personnage du prisonnier dans Aladdin, Disney.</p>
+</blockquote>
+<p>L'angle de vue ne permet pas de voir assez loin, de chaque côté du couloir mais des <strong>éclats de voix</strong> se font entendre occasionellement dans le fond du couloir, à droite.
+Le couloir est <strong>très bien éclairé</strong> par des chandeliers de plafond.</p>
+<p>La cellule est meublée d'une <strong>unique paillasse</strong>.
+Au coin opposé, un <strong>trou sale</strong> dans le sol, fait office de commodités.
+Le trou est assez grand pour y faire passer un bras, ce que les PJ peuvent essayer de faire (avec une certaine dose de courage).
+S'ils le font, il peuvent y trouver un os brisé d'animal.
+L'os est suffisamment fin pour <strong>crocheter la serrure</strong>, suffisament aiguisé pour <strong>servir de surin</strong>.</p>
+<p><strong>Toutes les quinze minutes</strong>, un garde traverse le couloir et regarde les cellules.</p>
+<p>Les PJ doivent trouver un moyen de <strong>s'évader</strong> de prison.
+S'ils n'y parviennent pas d'eux-mêmes, un garde finira par les libérer contre son gré.
+Il existe plusieurs méthodes possibles.</p>
+<h3><a class="header" href="#solution-1---faire-participer-le-mendiant" id="solution-1---faire-participer-le-mendiant">Solution 1 - Faire participer le mendiant</a></h3>
+<p>Le prisonnier d'en face les aidera, par exemple <strong>en faisant distraction</strong>, si les PJ l'<strong>aident en retour</strong>.
+Ils pourront lui promettre de le libérer ou lui donner l'os ou la clef du garde s'ils les possèdent.
+Si les PJ tiennent leur parole, il <strong>refusera de les suivre et laissera la porte close</strong>, insistant qu'il préfère attendre le bon moment pour agir.
+Si les PJ le trahissent <strong>il fera du bruit</strong> pour attirer l'attention des gardes.</p>
+<h3><a class="header" href="#solution-2---voler-la-clef-au-garde" id="solution-2---voler-la-clef-au-garde">Solution 2 - Voler la clef au garde</a></h3>
+<p>Le garde de service possède bien une clef, <strong>accrochée à la ceinture</strong> de son pantalon.
+Les joueurs peuvent tenter de l'attraper.
+Cependant le garde passe toujours <strong>trop loin des barreaux</strong>.
+Il faudra ruser.
+Les PJ peuvent demander l'aide de <strong>Bronson</strong> (Solution 1) ou attirer son attention.
+Il faudra alors réussir un test de <strong>Charisme Difficile</strong> pour y arriver.
+Le test est <strong>avantagé</strong> si les PJ utilisent la relation du garde avec Katrina pour le déstabiliser.
+Le garde s'approchera alors de colère pour <strong>les menacer</strong>.</p>
+<p>Dans tous les cas les joueurs peuvent l'<strong>aggriper</strong> (Test de force opposé à celle du garde), voire le menacer avec le surin, ou fouiller ses poches.</p>
+<h3><a class="header" href="#solution-3---crocheter-la-serrure" id="solution-3---crocheter-la-serrure">Solution 3 - Crocheter la serrure</a></h3>
+<p>Les PJ sont entièrement dépossedés, mais peuvent trouver <strong>un os au fond du trou</strong> des toilettes.
+L'os peut être utilisé pour <strong>crocheter la serrure</strong>.
+Ce sera <strong>Difficle</strong> en raison de la configuration : la serrure est de l'autre côté, le garde peut arriver d'un moment à l'autre et l'os n'est pas un outil idéal.
+Les possibilités d'échec sont : l'os tombe au sol ou se fiche dans la serrure, ou encore les joueurs se font repérer.
+Dans ce cas le garde viendra à eux et ouvrira la grille pour les corriger, ce qui impliquera une rencontre.</p>
+<h3><a class="header" href="#solution-4---attendre" id="solution-4---attendre">Solution 4 - Attendre</a></h3>
+<p>Au bout d'un moment et si les PJ ne parviennent pas à s'évader eux-mêmes, <strong>le garde s'approche</strong>, l'air effrayé, et <strong>dévérouille la porte</strong>.
+Il <strong>ordonnera aux joueurs de partir</strong> le plus discrètement possible et leur <strong>suppliera</strong> de ne pas faire de mal à Katrina, ayant fait ce que &quot;<strong>le petit démon</strong>&quot; a demandé.</p>
+<h3><a class="header" href="#repérés-" id="repérés-">Repérés !</a></h3>
+<p>Diverses conditions peuvent conduire les PJ à être repérés une fois sortis de leur cellule.
+Si ça arrive, la garde arrivera et tentera de les maitriser.
+Si Axel a libéré les PJ, un seul garde les poursuit.
+Sinon Axel l'accompagne.
+Ils ne possèdent pas d'armes létales et le combat à main nues sera difficile, bien que possible (les personnages joueurs seront, techniquement, en surnombre).
+Le meilleur moyen de se débarasser d'eux est de les enfermer dans la cellule.</p>
+<p>Les PJ peuvent aussi choisir de fuir.
+Ils seront alors poursuivis jusqu'à confrontation ou qu'ils arrivent à les semer.</p>
+<h3><a class="header" href="#récupérer-les-affaires" id="récupérer-les-affaires">Récupérer les affaires</a></h3>
+<p>La pièce à droite est <strong>la salle de repos</strong> et des <strong>pièces à conviction</strong> de la prison.
+Il s'agit d'une chambre de pierre de taille moyenne.
+La <strong>seule issue</strong> est l'ouverture à l'ouest par laquelle les PJ peuvent entrer.
+La pièce contient une grossière table au centre sur laquelle est posée un jeu de carte et quelques pièces de cuivre (1d20) et d'argent (1d4).
+Selon le déroulement des événements précédents, <strong>la pièce est occupée par un garde, les deux ou aucun</strong>.
+Contre le mur est de la pièce, <strong>deux grand coffres</strong> non vérouillés peuvent être ouverts.
+Le premier ne contient <strong>rien</strong> du tout à part un gobelet de bois, le second contient <strong>toutes les affaires des PJ</strong>.
+Cependant, même en cherchant bien, <strong>les joueurs ne retrouveront pas le Grenat Orque</strong> (dans le cas où ils l'ont trouvé durant le scénario précédent).</p>
+<h3><a class="header" href="#sortir-de-la-prison" id="sortir-de-la-prison">Sortir de la prison</a></h3>
+<p>Sortir de la prison est d'une <strong>facilité</strong> déconcertante.
+Les joueurs ne rencontrent aucune difficulté dans les couloirs des geôles.
+A la sortie, <strong>deux gardes contrôlent</strong> la porte du bâtiment depuis l'extérieur.
+Devant eux s'étend <strong>une foule</strong> d'habitants affairés à vivre leur vie.
+Quelle que soit leur méthode, les joueurs vont devoir <strong>semer</strong> les gardes dans la foule, une tentative très facile.</p>
+<p>A partir de là, là joueurs sont libres de choisir leur meilleure méthode pour <strong>faire une pause et réfléchir à la situation</strong>.</p>
+<p>Des idées possibles sont : Le fond d'une impasse, une chambre de taverne, sur les quais et sous un pont.
+Où qu'ils soient, <strong>leur conversation est interrompue par Firion</strong> qui leur apparait sous <strong>la forme d'un chat</strong>.
+L'introduction est terminée.</p>
+<h2><a class="header" href="#le-briefing" id="le-briefing">Le Briefing</a></h2>
+<blockquote>
+<p><a href="characters.html#firion">Firion</a> est un personnage acerbe, hautain.
+Il ne manquera jamais une occasion de reprocher sa transformation aux aventuriers ni sa différence supposée de rang social.
+Il reste cependant un personnage loyal malgré lui.</p>
+<p>Les aventuriers ayant assisté au rituel de Harald ont un lien psychique particulier avec Firion qui se manifeste par de rares événements empathiques ou télépathiques.</p>
+</blockquote>
+<p>Anciennement Nécromant humain, Firion ressemble maintenant trait pour trait à un <strong>chat noir à la queue blanche</strong>.
+La seule différence est qu'<strong>il peut parler</strong>, bien qu'il se garde de le faire en public.
+Il ne dit jamais complètement la vérité et se sert de son entourage pour ses propres desseins.</p>
+<p>L'apparition du chat interrompt soudainement les PJ dans leur activité.
+Si jamais ils ne sont pas dans une chambre de taverne, <strong>le chat les invitera à le rejoindre</strong> dans un tel endroit.</p>
+<p>Lorsque les joueurs <strong>apprendront son identité</strong>, ils seront tentés de l'abandonner.
+Dans ce cas, à chaque fois qu'un joueur tentera de sortir de la pièce, il subira un sort de <strong>pression mentale</strong> de Firion qu'il ne pourra briser qu'avec un <strong>test très difficile de Sagesse</strong>.
+La même chose se produira si les PJ tentent de le combattre.</p>
+<p>Dans tous les cas, Firion explique qu'<strong>il ne veut que parler</strong> et faire une offre.
+Afin de persuader les PJ, il évoque son état de félin comme <strong>une dette qu'ils ont envers lui</strong>.</p>
+<p>Si les PJ demandent des explications à Firion quant au enlèvements et meurtres d'innocents, il sera évasif et <strong>prétextera un plan trop complexe pour être compris par eux</strong>.
+Firion tentera quand même de minimiser ses actions <strong>en évoquant la nature criminelle des victimes</strong> ainsi qu'en insistant sur le fait qu'<strong>il n'avait pas le choix</strong>.</p>
+<p>La conversion se dirige alors petit à petit vers <strong>le Grenat Orque</strong>.
+Firion la présence comme un <strong>artefact</strong> extrêmement puissant possédant <strong>la force d'un être de Feu pur</strong>.
+Le grenat serait en fait, selon lui, une prison pour cette entité dont il ignore tout sauf la dangerosité.
+Une prison dont <strong>les parois s'érodent</strong> avec le temps.</p>
+<p>Si a créature venait à se libérer, les conséquences seraient <strong>catastrophiques</strong> pour tous les camps.
+Firion prétend savoir comment empêcher le grenat de se briser.
+Il évoque vaguement <strong>le lieu de création</strong> du Grenat Orque comme l'endroit où le grenat doit être emmené pour être solidifié à nouveau.
+Si les joueurs parlent du rituel nécrotique de Firion, il évoquera <strong>l'utilisation d'âmes pour renforcer le grenat temporairement</strong>.</p>
+<p>Firion souhaite continuer sa quête et <strong>retrouver le grenat</strong>.
+Il souhaite embaucher les aventuriers pour cette tâche.
+Cependant sa situation de chat l'empêche d'accomplir certaines tâches.
+Il fait appel aux PJ pour retrouver le grenat et leur laisse <strong>une piste de départ</strong> :
+la voleuse qui s'est emparée du grenat s'appellerait Siv.
+Il ajoute qu'il est clair qu'un vol aussi spécifique ne peut avoir été inspiré par la cupidité, mais que quelqu'un d'autre veut s'en emparer.</p>
+<h2><a class="header" href="#la-ville-de-pierre-noire" id="la-ville-de-pierre-noire">La ville de Pierre-Noire</a></h2>
+<blockquote>
+<p>Libre aux joueurs de mener l'enquête comme bon leur semble.
+Cette partie est une présentation de différents lieux qu'ils peuvent visiter tout au long de leur enquête.
+Cependant, et afin de ne pas bloquer les joueurs, une notion d'augmentation de la menace est décrite dans la section suivante.</p>
+</blockquote>
+<p><img src="images/pierre_noire.png" alt="Plan de Pierre-Noire" /></p>
+<p>Les joueurs sont <strong>libres de mener</strong> l'enquête comme ils le souhaitent afin de récupérer un maximum d'indices.
+Le but est pour eux de déterminer que l'acheteur du Grenat est un groupe criminel appelé les Tisonniers qui se terrent quelque part.
+L'entrée de leur cache se trouve dans l'un des moulins à l'extérieur de la ville (il faudra trouver lequel).</p>
+<p>Voici quelques informations que peuvent récupérer les PJ au cours de leur enquête.</p>
+<ul>
+<li><em>Pierre-Noire était autrefois Orque.</em>
+<ul>
+<li><em>L'empire a pris la ville et toute la région Est du contient aux orques il y a 150 ans.</em></li>
+</ul>
+</li>
+<li><em>La ville est une étape pour les combats à la frontière Nord</em>.
+<ul>
+<li>La bataille sur la frontière est récente (un an et demi environ).</li>
+<li>Les orques se tenaient tranquille avant cela.</li>
+</ul>
+</li>
+<li>Une rumeur prétend que la roche de Pierre-Noire pourrait supporter le feu le plus intense.</li>
+<li><em>Depuis peu une nouvelle mafia appelée les Tisonniers absorde toutes les factions criminelles du coin.</em></li>
+<li>Des rumeurs prétendent que des orques ont étés vu dans la ville.</li>
+<li><em>Le palais est à la recherche d'un trésor de guerre perdu depuis plusieurs semaines.</em>
+<ul>
+<li><em>Le trésor de guerre fait partie des objets volés aux orques lors de la prise de la ville</em>.</li>
+<li>La ville et le palais ont été construits par dessus la ville orque pour symboliser leur écrasement.</li>
+</ul>
+</li>
+<li>Siv est une voleuse connue du petit peuple.</li>
+<li><em>Hod connait Siv</em>
+<ul>
+<li><em>Elle vole pour survivre uniquement et est loyale envers ses amis.</em></li>
+<li><em>Elle n'a pas d'amis.</em></li>
+<li><em>Il ne sait pas où la trouver.</em>
+<em>- Il y a des soucis de stocks dans les cuisines du palais</em></li>
+<li>Depuis peu, l'apport de farine dans les cuisines du palais ont diminué.</li>
+<li>Il y a 3 moulins autour de la ville.</li>
+<li>Les deux moulins du Nord et du Sud appartiennent à Fraser, un fermier.</li>
+<li>Fraser habite en ville et peut être trouvé.</li>
+</ul>
+</li>
+<li>Un des moulins est cassé.
+<ul>
+<li>Le forgeron de la ville a une commande pour remplacer la pièce.</li>
+<li>Le forgeron ne sait pas quel moulin est cassé.</li>
+</ul>
+</li>
+</ul>
+<h2><a class="header" href="#augmentation-de-la-menace" id="augmentation-de-la-menace">Augmentation de la menace</a></h2>
+<p>Durant l'enquête, les PJ posent des questions, fouillent des salles et explorent des pistes.
+Cette activité ne manque pas d'<strong>alerter les agents des Tisonniers</strong>.
+Ces derniers tenteront plusieurs fois d'empêcher les PJ de découvrir le pot-au-roses.
+Ceci se manifestera par des rencontres et en dernier recours à la rencontre avec Siv.</p>
+<p>Pour <strong>chaque action faite</strong> par un PJ en rapport avec l'enquête, son joueur doit effectuer un <strong>test de Discretion</strong> dont la difficulté est augmentée (DD+5) à chaque nouveau lancé <em>échoué</em> (il est le même pour tout le groupe).
+La valeur initiale du DD est de 5.</p>
+<table><thead><tr><th><strong>DD</strong></th><th><strong>Difficulté</strong></th><th><strong>Événement en cas d'echec</strong></th></tr></thead><tbody>
+<tr><td>5</td><td>Très facile</td><td>Filature</td></tr>
+<tr><td>10</td><td>Facile</td><td>Rencontre Facile avec un ou plusieurs bandits</td></tr>
+<tr><td>15</td><td>Modérée</td><td>Rencontre Moyenne avec un ou plusieurs bandits</td></tr>
+<tr><td>20</td><td>Difficile</td><td>Rencontre Difficile avec un ou plusieurs bandits</td></tr>
+<tr><td>25</td><td>Très Difficile</td><td>Rencontre Moyenne avec un ou plusieurs bandits</td></tr>
+<tr><td>30+</td><td>Impossible</td><td>Rencontre avec Siv</td></tr>
+</tbody></table>
+<h3><a class="header" href="#rencontres" id="rencontres">Rencontres</a></h3>
+<p>Qu'il s'agisse d'une embuscade, d'une filature ou même d'une poursuite, les PJ se retrouvent face à un ou plusieurs <a href="bestiaire.html#bandit">bandits</a> parfois accompagnés de <a href="bestiaire.html#molosse">molosses</a>.</p>
+<p>A noter que tuer tous les bandits ne serait peut-être pas la solution systématiquement décidée par les joueurs.
+En effet, filer menacer ou convaincre un partisan des Tisonniers pourrait faire avancer l'enquête.</p>
+<h3><a class="header" href="#filature" id="filature">Filature</a></h3>
+<p>Les PJ se sentent observés.
+Un test de perception passif facile permet de remarquer la présence d'un <strong>homme encapuchoné</strong> qui les épie au loin
+Les PJ ont la possibilité de l'<strong>intercepter ou de le filer</strong>.
+Si l'homme encapuchonné est découvert, il tentera de fuir et semer les aventuriers et combattra au dernier moment, ce qui correspond à une rencontre contre un bandit.
+Réussir à filer l'homme encapuchonné conduira les PJ jusqu'à une taverne bruyante où ils le verront discuter avec deux hommes. 
+Ces derniers partiront de la taverne pour quitter la ville par la porte Sud-Est, mais les PJ perdront leur trace, ainsi que celle de l'homme encapuchonné.</p>
+<h3><a class="header" href="#rencontre-avec-siv" id="rencontre-avec-siv">Rencontre avec Siv</a></h3>
+<p>En dernier recours, Siv la voleuse <strong>fait la rencontre d'un ou plusieurs PJ</strong> au détour d'une rue.
+Dès qu'elle les verra, elle tentera de s'enfuir <strong>en bousculant l'un d'eux</strong>.
+Les PJ devront alors tenter de <strong>la poursuivre</strong>.</p>
+<p>Si la voleuse parvient à semer les aventuriers, ces derniers ressentiront soudainement sa position dans une ruelle au loin.
+Il s'agit de <strong>Firion qui leur envoie un signal par la pensée</strong>.
+Cette communication se fait sur tous les aventuriers possédant un lien mental avec le chat, sur un <strong>test avantagé de Perception (DD-10)</strong>.
+Dans ce cas, les aventuriers rejoindront Siv <strong>au fond d'une impasse</strong>, effrayée par <strong>la présence du chat</strong> qui parle.
+En voyant les PJ, elle reprendra ses esprits et sortira une dague, <strong>prête à se défendre</strong>.</p>
+<p>Siv est une jeune voleuse, enfant de la rue, déterminée et débrouillarde.
+Elle n'apprécie pas d'avoir été attrapée par les PJ et <strong>refuse de collaborer</strong> avec eux.
+Pour elle, divulguer des informations sur ses acheteurs est à la fois une forme d'échec et une mise en danger d'elle même.
+Elle n'est <strong>pas effrayée</strong> pour autant et profitera de la situation pour <strong>marchander</strong> les informations avec les aventuriers.</p>
+<p>Les PJ peuvent tenter d'obtenir des informations sur le Grenat, les plus essentielles à obtenir concernant l'acheteur et la transaction.
+Siv se soumet difficilement à l'intimidation et les menaces (DD20).
+De plus, <strong>en cas d'échec, la voleuse tentera de répondre par les armes</strong>.</p>
+<p>En cas de conflit armé avec Siv, elle <strong>capitulera dès qu'elle subira le premier coup</strong>.</p>
+<p>Quoi qu'il arrive, un test de Persuadion difficile (DD20) ou de l'argent permet d'obtenir une information supplémentaire parmis:</p>
+<ul>
+<li>Après la transaction, Siv a suivit ses acheteurs et les a vu entrer dans <strong>un moulin</strong> à l'extérieur des murs de la ville.</li>
+<li>L'acheteur représente le groupe <strong>des Tisonniers</strong>.</li>
+<li>La cheffe des Tisonniers s'appelle <strong>Mazoga</strong>.</li>
+<li>Les Tisonniers ont fédéré les groupes dissidents de la ville et prévoient de <strong>renverser le pouvoir</strong>.</li>
+</ul>
+<p>Firion décide <strong>d'accompagner les membres</strong> du groupe au moulin.
+Si jamais ces derniers refusent, il contestera et les suivra tout de même sans qu'il ne s'en rendent compte.</p>
+<h2><a class="header" href="#le-moulin" id="le-moulin">Le moulin</a></h2>
+<blockquote>
+<p>Les PJ doivent choisir à quel moment aller au moulin.
+Ne pas hésiter à leur poser la question et leur proposer un court repos.</p>
+</blockquote>
+<p>Le moulin est situé à l'est de la ville, avant le fleuve.
+D'extérieur, il n'a rien de particulier.
+Le bâtiment est carré, haut et les hélices sont à l'arrêt.</p>
+<p>Si les PJ <strong>attendent assez longtemps</strong>, ils peuvent voir un ou plusieurs <strong>individus entrer ou sortir</strong> du bâtiment.
+Parfois, cet événement est suivi (respectivement précédé) d'une très légère <strong>mise en rotation des hélices</strong>.</p>
+<p>La porte du moulin est <strong>ouverte</strong>, et il n'y a personne à l'intérieur à part <strong>un bandit endormi</strong> sur une chaise.
+Les aventuriers peuvent le réveiller ou l'attaquer par surprise.</p>
+<p>Le grenier est accessible depuis une échelle et ne contient que des sacs percés de graines non traitées.</p>
+<p>Le rez-de-chaussée est principalement occupée par <strong>la meule</strong>. Elle est reliée à une ronde dentée verouillée par <strong>un levier</strong>.
+Si les PJ délogent le levier avec un <strong>test de Force (DD-10)</strong>, les hélices s'activent et la meule <strong>découvre périodiquement un passage</strong>.
+Si les aventuriers ne bloquent pas à nouveau le mécanique, ils ne pourront passer qu'<strong>un par un</strong> à travers le passage. 
+De plus, le moulin <strong>tourne de plus en plus vite</strong> avec le temps.</p>
+<ul>
+<li>Pour passer à travers la trappe il faudra tenter un <strong>test d'accrobatie</strong> (DD5).</li>
+<li>Chaque test tenté (qu'il soit réussi ou non) <strong>augmente le DD de 5</strong> pour le test suivant.</li>
+<li>Le DD maximum est de 20.</li>
+<li>Stopper puis relancer le moulin <strong>réinitialisera</strong> la difficulté du test à 5.</li>
+<li>Si un PJ tente de <strong>ralentir</strong> le mécanisme d'une manière ou d'une autre pendant qu'un autre passe, le test est <strong>avantagé</strong>.</li>
+<li>Seul un PJ n'étant pas encore passé peut tenter de ralentir le mécanisme.</li>
+</ul>
+<p>En cas de succès le PJ saute dans le tour et <strong>atterit 3m plus bas dans la pénombre</strong>.
+En cas d'échec, le <strong>PJ meurt instantanément</strong>!</p>
+<p>Si les aventuriers bloquent le mécanisme, ils peuvent passer sans test et sans danger.</p>
+<h2><a class="header" href="#les-égouts" id="les-égouts">Les égouts</a></h2>
+<blockquote>
+<p>Durant cette étape, les joueurs doivent traverser les sous-terrains de la ville pour atteindre le lieu de la rencontre finale.
+Il s'agit d'un donjon classique Porte-Rencontre-Trésor permettant de mettre les joueurs dans l'action après une longue période d'enquête.</p>
+</blockquote>
+<p>Les PJ atterrissent dans un <strong>puit taillé dans la roche</strong> à travers un tunnel de pierre.
+Dans une direction le tunnel va vers la ville, dans l'autre il s'en éloigne.
+Le sol et les parois sont humides et moussues.
+L'obscurité est total et les aventuriers devront éclairer les lieux à moins d'être totalement aveuglé.</p>
+<p>Un test de Survie (Modéré) permet de remarquer <strong>des empreintes au sol</strong>, les plus fraîches allant et venant de la ville.</p>
+<p>Si les aventuriers décident de prendre la direction opposé à la ville, ils avanceront sur 25 mètres jusqu'à atteindre une ouverture boquée par des barreaux de fer et des débries.
+L'ouverture surplombe les berges du fleuve.</p>
+<p>En progressant vers la ville, l'<strong>odeur des égoûts</strong> se fait de plus en plus sentir.
+L'air s'alourdit.
+Au bout d'une centaine de mètres de marche, le couloir s'ouvre dans une galerie plus large.
+Les PJ sont à l'intérieur du <strong>réseau d'égoûts de la ville</strong>.
+Il s'agit de <strong>larges canaux</strong> avec des rives de pierre de chaque côté.
+De part et d'autres, les murs sont parfois percés d'un passage menant à une autre galerie.</p>
+<p>S'il fait <em>nuit</em>, les aventuriers sont dans le <strong>noir total</strong>.
+S'il fait <em>jour</em>, la lumière perce à travers quelques ouvertures, plongeant les lieux dans uen faible lumière (<strong>pénombre</strong>).</p>
+<p>L'endroit est labyrinthique et les aventures ne savent pas réellement quelle direction prendre.
+<strong>Il n'y a pas de plan</strong>, et les PJ devront continuer à <strong>suivre les traces</strong> de pas pour atteindre leur objectif.</p>
+<p>Les aventurier commencent avec un <strong>compteur de progression de 0</strong> et doivent <strong>atteindre 5</strong>.
+A chaque tentative successive, un PJ fait un test de <strong>Pistage modéré DD15</strong> pour tout le groupe.</p>
+<p>En cas de réussite, la progression augmente de 1, en cas d'échec elle diminue de 1. Sur un 1, le groupe tourne en rond et la progression diminue de 2. Sur un 20, la progression augmente de 2.</p>
+<p>De plus, chaque echec provoque la probabilité (<strong>1 chance sur 3</strong>) d'une rencontre aléatoire.
+Un test de perception passive réussi permettra de prévoir l'arrivée des monstres et de tenter de les surprendre.</p>
+<p>La difficulté de la rencontre est établie selon cette table:</p>
+<table><thead><tr><th>1d10</th><th>Difficulté</th><th>Créatures possibles</th></tr></thead><tbody>
+<tr><td>1-2</td><td>Facile</td><td>Bandits, Rats</td></tr>
+<tr><td>3-8</td><td>Normale</td><td>Bandits, Molosses, Crocodile</td></tr>
+<tr><td>9-10</td><td>Difficile</td><td>Bandits, Orques</td></tr>
+</tbody></table>
+<p>Une fois la progression à 5, les PJ découvrent une petite galerie creusée dans la roche menant à la salle du rituel.</p>
+<h2><a class="header" href="#le-rituel" id="le-rituel">Le rituel</a></h2>
+<blockquote>
+<p>Le rituel est organisé par <em>Mazoga</em>, la cheffe des Tisonniers.
+Elle tente de réveiller le pouvoir du Grenat pour invoquer des entités lui permettant de prendre d'assaut la ville de Pierre-Noire.
+Les joueurs ne parviendront pas à empêcher le rituel, mais ils vaincront <em>Mazoga</em> et emporteront le Grenat avec eux.</p>
+</blockquote>
+<p>Les PJ sont à l'<strong>est</strong> d'une pièce rectangulaire d'une vingtaine de mètres de chaque côté.
+Le plafond, situé à environ 9 mètres, est soutenu par de <strong>massives colonnes</strong> qui longent les murs est et ouest.
+L'intégralité de la pièce est faite de <strong>pierre noircie</strong> comme les remparts de la ville.
+<strong>Au nord</strong>, le mur est percé d'une <strong>ouverture</strong> qui a du autrefois accueillir une porte massive. </p>
+<p>L'ensemble de la pièce est <strong>bien éclairée</strong>.
+Au centre de la pièce, une <strong>grande table de bois</strong> est recouverte de poussière, de sacs trouvés et de débris divers.
+De vieilles chaises et tonneaux sont disséminés autour.
+La partie nord de la pièce contient <strong>une estrade de pierre</strong> sur laquelle se trouve un imposant <strong>trone noir</strong>.
+<strong>Mazoga y est assise</strong>, portant le <strong>grenat en pendentif</strong> autour de son cou.</p>
+<p>De là où elle est placée, Mazoga peut voir toute la pièce, aussi il est <strong>impossible de la surprendre</strong>.
+Lorsqu'elle remarque la présence des aventuriers, elle les interpelle, leur disant qu'<strong>il est trop tard</strong> pour empêcher quoi que ce soit, <strong>le rituel est déjà accompli</strong>.</p>
+<p><em>&quot;Pierre Noire sera restituée&quot;</em>, annonce-t-elle.
+Après quelques échanges verbaux (ou un round complet) avec Mazoga, elle s'interrompt puis <strong>hurle de douleur</strong>.
+Sa peau au niveau du grenat se met à <strong>brûler</strong>, de la fumée apparaît. Elle tente de le retirer, mais se brûle les mains.
+Immédiatement après, une <strong>gerbe de lave surgit</strong> du grenat et <strong>asperge Mazoga</strong>, qui, de douleur, tombe à terre.
+<strong>Elle meurt</strong> avant de toucher le sol.</p>
+<p>La lave prend petit à petit du volume sur le cadavre de l'orque.
+Elle prend la forme d'un <strong>gigantesque serpent</strong>.
+Puis, accompagné d'un hissement inhumain, la forme s'anime et les traits prennent l'apparence d'un <a href="bestiaire.html#serpent-de-feu">Serpent de Feu</a>.
+Sa queue brûle le corps et les vêtements de Mazoga, qui porte encore le grenat en pendentif.</p>
+<p>Les aventuriers doivent <strong>combattre la créature</strong>.</p>
+<p>Une fois la créature vaincue, les PJ peuvent récupérer le grenat sur Mazoga.
+Son corps est brûlé et plus rien n'est récupérable à part son arme.
+Le grenat est <strong>froid au toucher</strong> et ne semble plus dangereux.</p>
+<p>Si les aventuriers oublient de récupérer le grenat, <strong>Firion le leur fera remarquer</strong> (il leur apparaîtra si jamais ils ne se douaient pas de sa présence).</p>
+<h2><a class="header" href="#la-fuite" id="la-fuite">La fuite</a></h2>
+<blockquote>
+<p>Le rituel ayant eu lieu, les PJ font face à des créatures qu'elles n'ont jamais vues, faites de feu et de lave.
+La ville est en proie au chaos et les aventuriers tentent d'en sortir.</p>
+</blockquote>
+<p>Un bref tour de la pièce permet de repérer plusieurs ouvertures derrière les colonnes mais elles sont <strong>toutes condamnées</strong>.
+La seule issue possible est la <strong>sortie sud</strong>.
+Il s'agit d'un long couloir menant à des gravats au bout de 20 mètres.
+En arrivant au bout, <strong>un imposant tremblemennt</strong> se fait sentir et les murs grondent. 
+Cela ressemble à une <strong>détonation</strong>.
+De la poussière tombe des plafonds et un partie <strong>des gravats s'écroule</strong>, découvrant une partie d'une lourde <strong>porte en bois</strong>.</p>
+<p>Déplacer les quelques débris restants ne représente aucun défi particulier, mais la porte est plus difficile à ouvrir.
+Elle n'est pas vérouillée, mais elle est <strong>coincée</strong> par les âges.
+De plus, quelque chose semble <strong>la bloquer de l'autre côté</strong>.
+Il faudra réussir un test de <strong>Force DD17</strong> pour y parvenir.</p>
+<p>La porte finit par céder.
+Elle projette au sol une étagère de <strong>bouteilles de vin qui explosent</strong> et s'étalent au sol dans une pièce qui semble être une riche <strong>cave</strong> à vin.
+Le fracas est assourdissant.
+Mais le silence ne fait pas suite.
+Les aventuriers entendent à nouveau <strong>des grondements, puis des hurlements</strong>.</p>
+<p>Un escalier mène à de vastes cuisines. 
+Dans l'âtre d'une gigantesque cheminée, un ou plusieurs <a href="bestiaire.html#magmatique">magmatiques</a> sautillent en menaçant un enfant qui se défend avec un tisonnier.
+<strong>Il s'agit de Hod</strong>.</p>
+<p>Si les PJ tentent d'aider le garçon, et que le test d'initiative fait jouer au moins un magmatique en premier, la créature porte une attaque fatale au garçon.
+Si au moins un des aventuriers agit avant tout magmatique, le garçon fuit dans un coin de la pièce et attend la fin de l'affrontement.</p>
+<p>Avec ou sans Hod, les joueurs suivent le chemin vers la sortie et se retrouvent dans <strong>la cour du palais</strong>.
+Ils assistent au spectacle d'une <strong>ville en feu</strong> où les habitants tentent de fuir une <strong>armée de magmatiques</strong> qui entrent dans les maisons et escaladent les murs.</p>
+<p><strong>Les joueurs doivent fuir.</strong>
+S'ils tentent de se battre, ils peuvent <strong>&quot;chercher le conflit&quot;</strong> pour rencontrer un nombre variable de magmatiques (1d4).</p>
+<p>Dans tous les cas, la fuite est obligatoire.</p>
+<p>Arrivés à la porte <strong>Sud-Est</strong>, la foule est arrêtée, effrayée devant un <a href="bestiaire.html#azer">Azer</a>.
+La créature fait rempart pour empêcher les civils de sortir de la ville.
+Si un aventurier propose de passer par une autre porte, des personnes alentours répondent quelles sont gardées de la même manière.</p>
+<p>Il n'y a pas d'autre moyen que de <strong>combattre</strong>.</p>
+<p>Pendant le combat, les PJ remarquent que les magmatiques ne prettent pas attention aux gens et continuent à <strong>escalader les bâtiments</strong>.</p>
+<p>Une fois sortis des remparts, les créatures <strong>ne semblent poursuivent personne</strong>.</p>
+<p>Les aventuriers suivent les habitants jusqu'à <strong>l'autre côté du fleuve</strong>.
+En observant la ville avec la foule, ils voient soudainement <strong>une séries d'explosions qui, par miliers, réduisent la ville en cendre en un instant</strong>.
+Seules les murailles noires restent debout.</p>
+<p>Le calme revient soudain, laissant place aux pleurs et aux lamentations des habitants.
+C'est la fin de ce chapitre.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="chapter_1.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="characters.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="chapter_1.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="characters.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

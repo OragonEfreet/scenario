@@ -1,0 +1,442 @@
+<!DOCTYPE HTML>
+<html lang="fr" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Bestiaire - L'Age d'Or</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Les Gobelins de Harald</a></li><li class="chapter-item expanded "><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> La Chute de Pierre-Noire</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="characters.html">Personnnages Importants</a></li><li class="chapter-item expanded affix "><a href="bestiaire.html" class="active">Bestiaire</a></li><li class="chapter-item expanded affix "><a href="groupes.html">Groupes</a></li><li class="chapter-item expanded affix "><a href="ack.html">Références</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">L'Age d'Or</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#bestiaire" id="bestiaire">Bestiaire</a></h1>
+<h2><a class="header" href="#bandit" id="bandit">Bandit</a></h2>
+<p><em>Humanoïde (toute race) de taille M, tout alignement non loyal</em></p>
+<p><strong>Classe d'armure</strong> 12 (armure de cuir) <br />
+<strong>Points de vie</strong> 11 (2d8 + 2) <br />
+<strong>Vitesse</strong> 9 m </p>
+<table><thead><tr><th><strong>FOR</strong></th><th><strong>DEX</strong></th><th><strong>CON</strong></th><th><strong>INT</strong></th><th><strong>SAG</strong></th><th><strong>CHA</strong></th></tr></thead><tbody>
+<tr><td>11 (+0)</td><td>12 (+1)</td><td>12 (+1)</td><td>10 (+0)</td><td>10 (+0)</td><td>10 (+01)</td></tr>
+</tbody></table>
+<p><strong>Sens</strong> Perception passive 10 <br />
+<strong>Langues</strong> une langue au choix (généralement le commun) <br />
+<strong>Puissance</strong> 1/8 (25 PX) </p>
+<h3><a class="header" href="#actions" id="actions">ACTIONS</a></h3>
+<p><strong>Cimeterre</strong>. Attaque au corps à corps avec une arme : +3 au toucher, allonge 1,50 m, une cible. Touché : 4 (1d6 + 1) dégâts tranchants. <br />
+<strong>Arbalète légère</strong>. Attaque à distance avec une arme : +3 au toucher, portée 24/96 m, une cible. Touché : 5 (1d8 + 1) dégâts perforants.</p>
+<blockquote>
+<p>Les bandits vagabondent en bandes et sont parfois dirigés par des malfrats, des vétérans ou des mages. Tous les bandits ne sont pas mauvais. L'oppression, la sécheresse, les épidémies ou la famine peuvent souvent entraîner d'honnêtes gens vers une vie de banditisme.
+Les pirates sont des bandits de haute mer. Ils peuvent être des flibustiers intéressés uniquement par les trésors et le meurtre, ou être des corsaires légitimés par la couronne pour attaquer et piller les navires d'une nation ennemie.</p>
+</blockquote>
+<p><em>Source: <a href="https://www.aidedd.org">AideDnD.org</a></em></p>
+<hr />
+<h2><a class="header" href="#crocodile" id="crocodile">Crocodile</a></h2>
+<p><em>Bête de taille G, sans alignement</em></p>
+<p><strong>Classe d'armure</strong> 12 (armure naturelle) <br />
+<strong>Points de vie</strong> 19 (3d10 + 3) <br />
+<strong>Vitesse</strong> 6 m, nage 9 m </p>
+<table><thead><tr><th><strong>FOR</strong></th><th><strong>DEX</strong></th><th><strong>CON</strong></th><th><strong>INT</strong></th><th><strong>SAG</strong></th><th><strong>CHA</strong></th></tr></thead><tbody>
+<tr><td>15 (+2)</td><td>10 (+0)</td><td>13 (+1)</td><td>2 (-4)</td><td>10 (+0)</td><td>5  (-3)</td></tr>
+</tbody></table>
+<p><strong>Compétences</strong> Discrétion +2 <br />
+<strong>Sens</strong> Perception passive 10 <br />
+<strong>Langues</strong> - <br />
+<strong>Puissance</strong> 1/2 (100 PX) </p>
+<p><strong>Retenir son souffle</strong>. Le crocodile peut retenir son souffle durant 15 minutes.</p>
+<h3><a class="header" href="#actions-1" id="actions-1">Actions</a></h3>
+<p><strong>Morsure</strong>. Attaque au corps à corps avec une arme : +4 au toucher, allonge 1,50 m, une créature. Touché : 7 (1d10 + 2) dégâts perforants, et la cible est agrippée (DD 12 pour s'échapper). Tant qu'elle est agrippée, la créature est entravée, et le crocodile ne peut pas mordre une autre cible.</p>
+<hr />
+<h2><a class="header" href="#garde" id="garde">Garde</a></h2>
+<p><em>Humanoïde (toute race) de taille M, tout alignement</em></p>
+<p><strong>Classe d'armure</strong> 16 (chemise de mailles, bouclier)
+<strong>Points de vie</strong> 11 (2d8 + 2)
+<strong>Vitesse</strong> 9 m</p>
+<table><thead><tr><th><strong>FOR</strong></th><th><strong>DEX</strong></th><th><strong>CON</strong></th><th><strong>INT</strong></th><th><strong>SAG</strong></th><th><strong>CHA</strong></th></tr></thead><tbody>
+<tr><td>13 (+1)</td><td>12 (+1)</td><td>12 (+1)</td><td>10 (+0)</td><td>11 (+0)</td><td>10 (+0)</td></tr>
+</tbody></table>
+<p><strong>Compétences</strong> Perception +2 <br />
+<strong>Sens</strong> Perception passive 12 <br />
+<strong>Langues</strong> une langue au choix (généralement le commun) <br />
+<strong>Puissance</strong> 1/8 (25 PX) </p>
+<h3><a class="header" href="#actions-2" id="actions-2">Actions</a></h3>
+<p><strong>Lance</strong>. Attaque au corps à corps ou à distance avec une arme : +3 au toucher, allonge 1,50 m ou portée 6/18 m, une cible. Touché : 4 (1d6 + 1) dégâts perforants ou 5 (1d8 + 1) dégâts perforants si utilisée à deux mains pour faire une attaque au corps à corps.</p>
+<blockquote>
+<p>Les gardes peuvent être membres de la milice d'une cité, sentinelles dans une citadelle ou ville fortifiée, ou gardes du corps de nobles et de marchands.</p>
+</blockquote>
+<p><em>Source: <a href="https://www.aidedd.org">AideDnD.org</a></em></p>
+<hr />
+<h2><a class="header" href="#gobelin" id="gobelin">Gobelin</a></h2>
+<p><em>Humanoïde (gobelinoïde) de taille P, neutre mauvais</em></p>
+<p><strong>Classe d'armure</strong> 15 (armure de cuir, bouclier)
+<strong>Points de vie</strong> 7 (2d6)
+<strong>Vitesse</strong> 9 m</p>
+<table><thead><tr><th><strong>FOR</strong></th><th><strong>DEX</strong></th><th><strong>CON</strong></th><th><strong>INT</strong></th><th><strong>SAG</strong></th><th><strong>CHA</strong></th></tr></thead><tbody>
+<tr><td>8 (-1)</td><td>14 (+2)</td><td>10 (+0)</td><td>10 (+0)</td><td>8 (-1)</td><td>8 (-1)</td></tr>
+</tbody></table>
+<p><strong>Compétences</strong> Discrétion +6 <br />
+<strong>Sens</strong> vision dans le noir 18 m, Perception passive 9 <br />
+<strong>Langues</strong> commun, gobelin <br />
+<strong>Puissance</strong> 1/4 (50 PX)  </p>
+<p><strong>Fuite agile</strong>. Le gobelin peut Se cacher ou Se désengager à chacun de ses tours en utilisant une action bonus. </p>
+<h3><a class="header" href="#actions-3" id="actions-3">Actions</a></h3>
+<p><strong>Cimeterre</strong>. Attaque au corps à corps avec une arme : +4 au toucher, allonge 1,50 m, une cible. Touché : 5 (1d6 + 2) dégâts tranchants. <br />
+<strong>Arc court</strong>. Attaque à distance avec une arme : +4 au toucher, portée 24/96 m, une cible. Touché : 5 (1d6 + 2) dégâts perforants. </p>
+<blockquote>
+<p>Les gobelins sont de petits humanoïdes malveillants qui vivent dans des donjons abandonnés ou dans des taudis lugubres. Individuellement faibles, ils se rassemblent en grand nombre pour tourmenter les autres créatures.</p>
+</blockquote>
+<p><img src="images/goblin.jpg" alt="Gobelin" /></p>
+<p><em>Source: <a href="https://www.aidedd.org">AideDnD.org</a></em></p>
+<hr />
+<h2><a class="header" href="#magmatique" id="magmatique">Magmatique</a></h2>
+<p><em>Élémentaire de taille P, chaotique neutre</em></p>
+<p>Classe d'armure 14 (armure naturelle)
+Points de vie 9 (2d6 + 2)
+Vitesse 9 m</p>
+<table><thead><tr><th><strong>FOR</strong></th><th><strong>DEX</strong></th><th><strong>CON</strong></th><th><strong>INT</strong></th><th><strong>SAG</strong></th><th><strong>CHA</strong></th></tr></thead><tbody>
+<tr><td>7 (-2)</td><td>15 (+2)</td><td>12 (+1)</td><td>8 (-1)</td><td>11 (+0)</td><td>10 (+0)</td></tr>
+</tbody></table>
+<p><strong>Résistances</strong> aux dégâts contondant, perforant et tranchant d'attaques non magiques
+<strong>Immunités</strong> aux dégâts feu
+<strong>Sens</strong> vision dans le noir 18 m, Perception passive 10
+<strong>Langues</strong> igné
+<strong>Puissance</strong> 1/2 (100 PX)</p>
+<p><strong>Mort explosive</strong>. Lorsque le magmatique est tué, il éclate dans une explosion de feu et de magma. Chaque créature située dans un rayon de 3 mètres autour de lui doit effectuer un jet de sauvegarde de Dextérité DD 11, subissant 7 (2d6) dégâts de feu en cas d'échec, ou la moitié de ces dégâts en cas de réussite. Les objets inflammables qui ne sont pas portés ou transportés et situés dans la zone prennent feu.</p>
+<p><strong>Illumination enflammée</strong>. Par une action bonus, le magmatique peut s'auto-enflammer ou éteindre ses flammes. Tant qu'il brûle, le magmatique émet une lumière vive dans un rayon de 3 mètres et une lumière faible sur 3 mètres supplémentaires.</p>
+<h3><a class="header" href="#actions-4" id="actions-4">Actions</a></h3>
+<p><strong>Contact</strong>. Attaque au corps à corps avec une arme : +4 au toucher, allonge 1,50 m, une cible. Touché : 7 (2d6) dégâts de feu. Si la cible est une créature ou un objet inflammable, elle s'embrase. Jusqu'à ce qu'une créature utilise son action pour éteindre les flammes, la cible subit 3 (1d6) dégâts de feu à la fin de chacun de ses tours.</p>
+<p><img src="images/magmin.jpg" alt="Magmatique" /></p>
+<p><em>Source: <a href="https://www.aidedd.org">AideDnD.org</a></em></p>
+<hr />
+<h2><a class="header" href="#molosse" id="molosse">Molosse</a></h2>
+<p><em>Bête de taille M, sans alignement</em></p>
+<p><strong>Classe d'armure</strong> 12 <br />
+<strong>Points de vie</strong> 5 (1d8 + 1) <br />
+<strong>Vitesse</strong> 12 m </p>
+<table><thead><tr><th><strong>FOR</strong></th><th><strong>DEX</strong></th><th><strong>CON</strong></th><th><strong>INT</strong></th><th><strong>SAG</strong></th><th><strong>CHA</strong></th></tr></thead><tbody>
+<tr><td>13 (+1)</td><td>14 (+2)</td><td>12 (+1)</td><td>3 (-4)</td><td>12 (+1)</td><td>7  (-2)</td></tr>
+</tbody></table>
+<p><strong>Compétences</strong> Perception +3 <br />
+<strong>Sens</strong> Perception passive 13 <br />
+<strong>Langues</strong> - <br />
+<strong>Puissance</strong> 1/8 (25 PX) </p>
+<p><strong>Odorat et ouïe aiguisés.</strong> Le molosse a un avantage aux jets de Sagesse (Perception) basés sur l'odorat ou l'ouïe.</p>
+<h3><a class="header" href="#actions-5" id="actions-5">Actions</a></h3>
+<p><strong>Morsure.</strong> Attaque au corps à corps avec une arme : +3 au toucher, allonge 1,50 m, une cible. Touché : 4 (1d6 + 1) dégâts perforants. Si la cible est une créature, elle doit réussir un jet de sauvegarde de Force DD 11 pour ne pas tomber à terre.</p>
+<blockquote>
+<p>Les molosses sont d'impressionnants chiens prisés par les humanoïdes pour leur loyauté et leur sens aiguisés.</p>
+</blockquote>
+<p><img src="images/mastiff.jpg" alt="Molosse" /></p>
+<p><em>Source: <a href="https://www.aidedd.org">AideDnD.org</a></em></p>
+<hr />
+<h2><a class="header" href="#nuée-de-rats" id="nuée-de-rats">Nuée de rats</a></h2>
+<p><strong>Nuée de bêtes TP de taille M, sans alignement</strong></p>
+<p><strong>Classe d'armure</strong> 10 <br />
+<strong>Points de vie</strong> 24 (7d8 - 7) <br />
+<strong>Vitesse</strong> 9 m </p>
+<table><thead><tr><th><strong>FOR</strong></th><th><strong>DEX</strong></th><th><strong>CON</strong></th><th><strong>INT</strong></th><th><strong>SAG</strong></th><th><strong>CHA</strong></th></tr></thead><tbody>
+<tr><td>9 (-1)</td><td>11 (+0)</td><td>9 (-1)</td><td>2 (-4)</td><td>10 (+0)</td><td>3 (-4)</td></tr>
+</tbody></table>
+<p><strong>Résistances aux dégâts</strong> contondant, perforant, tranchant <br />
+<strong>Immunités aux conditions</strong> à terre, agrippé, charmé, effrayé, entravé, étourdi, paralysé, pétrifié <br />
+<strong>Sens</strong> vision dans le noir 9 m, Perception passive 10 <br />
+<strong>Langues</strong> - <br />
+<strong>Puissance</strong> 1/4 (50 PX) </p>
+<p><strong>Odorat aiguisé</strong>. La nuée a un avantage aux jets de Sagesse (Perception) basés sur l'odorat.</p>
+<p><strong>Nuée</strong>. La nuée peut occuper l'espace d'une créature et vice versa, et peut passer par une ouverture suffisamment grande pour un rat de taille TP. La nuée ne peut pas regagner de points de vie ou gagner des points de vie temporaires.</p>
+<h2><a class="header" href="#actions-6" id="actions-6">Actions</a></h2>
+<p><strong>Morsures</strong>. Attaque au corps à corps avec une arme : +2 au toucher, allonge 0 m, une cible dans l'espace de la nuée. Touché : 7 (2d6) dégâts perforants, ou 3 (1d6) si la nuée ne possède plus que la moitié ou moins de ses points de vie.</p>
+<hr />
+<h2><a class="header" href="#orque" id="orque">Orque</a></h2>
+<p><em>Humanoïde (orque) de taille M, chaotique mauvais</em></p>
+<ul>
+<li><strong>Classe d'armure</strong> 13 (armure de peau)</li>
+<li><strong>Points de vie</strong> 15 (2d8+6)</li>
+<li><strong>Vitesse</strong> 9 m</li>
+</ul>
+<table><thead><tr><th><strong>FOR</strong></th><th><strong>DEX</strong></th><th><strong>CON</strong></th><th><strong>INT</strong></th><th><strong>SAG</strong></th><th><strong>CHA</strong></th></tr></thead><tbody>
+<tr><td>16 (+3)</td><td>12 (+1)</td><td>16 (+3)</td><td>7 (-2)</td><td>11 (+0)</td><td>10 (+0)</td></tr>
+</tbody></table>
+<p><strong>Compétences</strong> Intimidation +2 <br />
+<strong>Sens</strong> vision dans le noir 18 m, Perception passive 10 <br />
+<strong>Langues</strong> commun, orque <br />
+<strong>Puissance</strong> 1/2 (100 PX) </p>
+<p><strong>Agressif</strong>. Par une action bonus, l'orque peut se déplacer de sa vitesse vers une créature hostile qu'il peut voir.</p>
+<h3><a class="header" href="#actions-7" id="actions-7">Actions</a></h3>
+<p><strong>Hache à deux mains</strong>. Attaque au corps à corps avec une arme : +5 au toucher, allonge 1,50 m, une cible. Touché : 9 (1d12 + 3) dégâts tranchants. <br />
+<strong>Javeline</strong>. Attaque au corps à corps ou à distance avec une arme : +5 au toucher, allonge 1,50 m ou portée 9/36 m, une cible. Touché : 6 (1d6 + 3) dégâts perforants. </p>
+<blockquote>
+<p>Les orques sont des humanoïdes sauvages qui ont une posture voutée, des visages grossiers et des dents proéminentes qui ressemblent à des défenses. Ils se rassemblent en tribus qui étanchent leur soif de sang en attaquant tous les humanoïdes qu'ils croisent.</p>
+</blockquote>
+<p><img src="images/orc.jpg" alt="Orque" /></p>
+<p><em>Source: <a href="https://www.aidedd.org">AideDnD.org</a></em></p>
+<hr />
+<h2><a class="header" href="#rat-géant" id="rat-géant">Rat géant</a></h2>
+<p><em>Bête de taille P, sans alignement</em></p>
+<p><strong>Classe d'armure</strong> 12
+<strong>Points de vie</strong> 7 (2d6)
+<strong>Vitesse</strong> 9 m</p>
+<table><thead><tr><th><strong>FOR</strong></th><th><strong>DEX</strong></th><th><strong>CON</strong></th><th><strong>INT</strong></th><th><strong>SAG</strong></th><th><strong>CHA</strong></th></tr></thead><tbody>
+<tr><td>7 (-2)</td><td>15 (+2)</td><td>11 (+0)</td><td>2 (-4)</td><td>10 (+0)</td><td>4 (-3)</td></tr>
+</tbody></table>
+<p><strong>Sens</strong> vision dans le noir 18 m, Perception passive 10 _
+<strong>Langues</strong> - _
+<strong>Puissance</strong> 1/8 (25 PX) _</p>
+<p><strong>Odorat aiguisé</strong>. Le rat a un avantage aux jets de Sagesse (Perception) basés sur l'odorat.</p>
+<p><strong>Tactique de groupe</strong>. Le rat a un avantage aux jets d'attaque contre une créature si au moins l'un de ses alliés est à 1,50 mètre ou moins de la créature et n'est pas incapable d'agir.</p>
+<h3><a class="header" href="#actions-8" id="actions-8">Actions</a></h3>
+<p><strong>Morsure</strong>. Attaque au corps à corps avec une arme : +4 au toucher, allonge 1,50 m, une cible. Touché : 4 (1d4 + 2) dégâts perforants.</p>
+<hr />
+<h2><a class="header" href="#rat" id="rat">Rat</a></h2>
+<p><em>Bête de taille TP, sans alignement</em></p>
+<p><strong>Classe d'armure</strong> 10 <br />
+<strong>Points de vie</strong> 1 (1d4 - 1) <br />
+<strong>Vitesse</strong> 6 m </p>
+<table><thead><tr><th><strong>FOR</strong></th><th><strong>DEX</strong></th><th><strong>CON</strong></th><th><strong>INT</strong></th><th><strong>SAG</strong></th><th><strong>CHA</strong></th></tr></thead><tbody>
+<tr><td>2 (-4)</td><td>11 (+0)</td><td>9 (-1)</td><td>2 (-4)</td><td>10 (+0)</td><td>4 (-3)</td></tr>
+</tbody></table>
+<p><strong>Sens</strong> vision dans le noir 9 m, Perception passive 10 <br />
+<strong>Langues</strong> - <br />
+<strong>Puissance</strong> 0 (10 PX)</p>
+<p><strong>Odorat aiguisé</strong>. Le rat a un avantage aux jets de Sagesse (Perception) basés sur l'odorat.</p>
+<h3><a class="header" href="#actions-9" id="actions-9">Actions</a></h3>
+<p>Morsure. Attaque au corps à corps avec une arme : +0 au toucher, allonge 1,50 m, une cible. Touché : 1 dégât perforant</p>
+<p><img src="images/rat.jpg" alt="Rat" /></p>
+<p><em>Source: <a href="https://www.aidedd.org">AideDnD.org</a></em></p>
+<hr />
+<h2><a class="header" href="#serpent-de-feu" id="serpent-de-feu">Serpent de feu</a></h2>
+<p><em>Élémentaire de taille M, neutre mauvais</em></p>
+<p><strong>Classe d'armure</strong> 14 (armure naturelle) <br />
+<strong>Points</strong> de vie 22 (5d8) <br />
+<strong>Vitesse</strong> 9 m </p>
+<table><thead><tr><th><strong>FOR</strong></th><th><strong>DEX</strong></th><th><strong>CON</strong></th><th><strong>INT</strong></th><th><strong>SAG</strong></th><th><strong>CHA</strong></th></tr></thead><tbody>
+<tr><td>12 (+1)</td><td>14 (+2)</td><td>11 (+0)</td><td>7 (-2)</td><td>10 (+0)</td><td>8 (-1)</td></tr>
+</tbody></table>
+<p><strong>Vulnérabilités</strong> aux dégâts froid <br />
+<strong>Résistances</strong> aux dégâts contondant, perforant et tranchant d'attaques non magiques <br />
+<strong>Immunités</strong> aux dégâts feu <br />
+<strong>Sens</strong> vision dans le noir 18 m, Perception passive 10 <br />
+<strong>Langues</strong> comprend l'igné mais ne peut pas parler <br />
+<strong>Puissance</strong> 1 (200 PX) </p>
+<p><strong>Corps brûlant</strong>. Une créature qui touche le serpent (lors d'un simple contact ou d'une attaque au corps à corps à 1,50 mètre ou moins de lui) subit 3 (1d6) dégâts de feu.</p>
+<h3><a class="header" href="#actions-10" id="actions-10">Actions</a></h3>
+<p><strong>Attaques multiples</strong>. Le serpent effectue deux attaques : une de morsure et une avec sa queue. <br />
+<strong>Morsure</strong>. Attaque au corps à corps avec une arme : +3 au toucher, allonge 1,50 m, une cible. Touché : 3 (1d4 + 1) dégâts perforants + 3 (1d6) dégâts de feu. <br />
+<strong>Queue</strong>. Attaque au corps à corps avec une arme : +3 au toucher, allonge 1,50 m, une cible. Touché : 3 (1d4 + 1) dégâts contondants + 3 (1d6) dégâts de feu.</p>
+<p><img src="images/fire-snake.jpg" alt="Serpent de feu" /></p>
+<p><em>Source: <a href="https://www.aidedd.org">AideDnD.org</a></em></p>
+<hr />
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="characters.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="groupes.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="characters.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="groupes.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
